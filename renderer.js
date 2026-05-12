@@ -6,6 +6,8 @@ const path = require("path");
 let classifier = new natural.BayesClassifier();
 let modelTrained = false;
 
+let stats = {};
+
 function loadConfig() {
   try {
     if (!fs.existsSync("config.json")) {
@@ -100,15 +102,63 @@ async function classifyDocument() {
 
     const result = classifier.classify(cleaned);
 
+    if (!stats[result]) {
+      stats[result] = 0;
+    }
+    stats[result]++;
+
     ipcRenderer.send("log-message", `Classified ${filePath} as ${result}`);
+
     document.getElementById("result").innerText = `Категорія: ${result}`;
+
+    updateStats();
   } catch (err) {
     ipcRenderer.send("log-message", `Classification error: ${err.message}`);
     alert("Помилка при класифікації файлу");
   }
 }
 
+function updateStats() {
+  const statsDiv = document.getElementById("stats");
+
+  let text = "Статистика:\n";
+
+  for (let key in stats) {
+    text += `${key}: ${stats[key]}\n`;
+  }
+
+  statsDiv.innerText = text;
+}
+
+function saveStats() {
+  try {
+    fs.writeFileSync("stats.json", JSON.stringify(stats, null, 2));
+    ipcRenderer.send("log-message", "Stats saved");
+    alert("Статистика збережена!");
+  } catch (err) {
+    ipcRenderer.send("log-message", `Stats save error: ${err.message}`);
+  }
+}
+
+function loadStats() {
+  try {
+    if (!fs.existsSync("stats.json")) return;
+
+    stats = JSON.parse(fs.readFileSync("stats.json", "utf-8"));
+    updateStats();
+
+    ipcRenderer.send("log-message", "Stats loaded");
+  } catch (err) {
+    ipcRenderer.send("log-message", `Stats load error: ${err.message}`);
+  }
+}
+
 window.onload = () => {
   document.getElementById("trainBtn").onclick = trainModel;
   document.getElementById("classifyBtn").onclick = classifyDocument;
+
+  document.getElementById("saveStatsBtn").onclick = saveStats;
+
+  loadStats();
+  updateStats();
 };

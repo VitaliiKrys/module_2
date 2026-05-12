@@ -20,18 +20,30 @@ app.whenReady().then(createWindow);
 app.on("window-all-closed", () => {
   if (process.platform !== "darwin") app.quit();
 });
-
-// Логування
 ipcMain.on("log-message", (event, msg) => {
-  const config = JSON.parse(fs.readFileSync("config.json"));
-  fs.appendFileSync(config.logFile, `[${new Date().toISOString()}] ${msg}\n`);
+  try {
+    const configPath = path.join(__dirname, "config.json");
+
+    if (!fs.existsSync(configPath)) return;
+
+    const config = JSON.parse(fs.readFileSync(configPath, "utf-8"));
+
+    if (!config.logFile) return;
+
+    fs.appendFileSync(
+      config.logFile,
+      `[${new Date().toISOString()}] ${msg}\n`
+    );
+  } catch (err) {
+    console.error("Log error:", err.message);
+  }
 });
 
-// Вибір файлу
 ipcMain.handle("select-file", async () => {
   const result = await dialog.showOpenDialog({
     properties: ["openFile"],
     filters: [{ name: "Text", extensions: ["txt"] }]
   });
+
   return result.canceled ? null : result.filePaths[0];
 });

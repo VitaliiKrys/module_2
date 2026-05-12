@@ -3,7 +3,8 @@
   "version": "1.0.0",
   "main": "main.js",
   "scripts": {
-    "start": "electron ."
+    "start": "electron .",
+     "test": "jest"
   },
   "dependencies": {
     "electron": "^26.0.0",

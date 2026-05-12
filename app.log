@@ -297,3 +297,53 @@
 [2026-05-07T17:34:03.371Z] Model trained successfully
 [2026-05-07T17:34:07.337Z] Classified C:\Users\user\Desktop\it-support\module_1\documents\nakaz_2.txt as nakaz
 [2026-05-07T17:59:26.218Z] User cancelled file selection
+[2026-05-12T19:10:35.343Z] Added dogovir_1.txt as dogovir
+[2026-05-12T19:10:35.358Z] Added nakaz_2.txt as nakaz
+[2026-05-12T19:10:35.359Z] Added nazva_3.txt as nazva
+[2026-05-12T19:10:35.359Z] Added zayava_1.txt as zayava
+[2026-05-12T19:10:35.360Z] Added zvit_1.txt as zvit
+[2026-05-12T19:10:35.360Z] Model trained successfully
+[2026-05-12T19:10:40.849Z] Save error: classifier.toJson is not a function
+[2026-05-12T19:10:44.862Z] Classified C:\Users\user\Desktop\it-support\module_1\documents\nakaz_2.txt as nakaz
+[2026-05-12T19:13:50.672Z] Added dogovir_1.txt as dogovir
+[2026-05-12T19:13:50.684Z] Added nakaz_2.txt as nakaz
+[2026-05-12T19:13:50.685Z] Added nazva_3.txt as nazva
+[2026-05-12T19:13:50.685Z] Added zayava_1.txt as zayava
+[2026-05-12T19:13:50.686Z] Added zvit_1.txt as zvit
+[2026-05-12T19:13:50.686Z] Model trained successfully
+[2026-05-12T19:13:52.687Z] Save error: classifier.toJson is not a function
+[2026-05-12T19:15:56.037Z] Auto-load error: Unexpected end of JSON input
+[2026-05-12T19:15:57.031Z] Load error: Unexpected end of JSON input
+[2026-05-12T19:15:58.701Z] Load error: Unexpected end of JSON input
+[2026-05-12T19:15:59.887Z] Added dogovir_1.txt as dogovir
+[2026-05-12T19:15:59.887Z] Added nakaz_2.txt as nakaz
+[2026-05-12T19:15:59.888Z] Added nazva_3.txt as nazva
+[2026-05-12T19:15:59.888Z] Added zayava_1.txt as zayava
+[2026-05-12T19:15:59.889Z] Added zvit_1.txt as zvit
+[2026-05-12T19:15:59.889Z] Model trained successfully
+[2026-05-12T19:16:01.041Z] Load error: Unexpected end of JSON input
+[2026-05-12T19:16:02.597Z] Save error: classifier.toJson is not a function
+[2026-05-12T19:16:06.452Z] User cancelled file selection
+[2026-05-12T19:21:54.842Z] Added dogovir_1.txt as dogovir
+[2026-05-12T19:21:54.845Z] Added nakaz_2.txt as nakaz
+[2026-05-12T19:21:54.846Z] Added nazva_3.txt as nazva
+[2026-05-12T19:21:54.846Z] Added zayava_1.txt as zayava
+[2026-05-12T19:21:54.847Z] Added zvit_1.txt as zvit
+[2026-05-12T19:21:54.847Z] Model trained successfully
+[2026-05-12T19:21:58.598Z] Classified C:\Users\user\Desktop\it-support\module_1\documents\nakaz_2.txt as nakaz
+[2026-05-12T19:22:01.287Z] Added dogovir_1.txt as dogovir
+[2026-05-12T19:22:01.288Z] Added nakaz_2.txt as nakaz
+[2026-05-12T19:22:01.288Z] Added nazva_3.txt as nazva
+[2026-05-12T19:22:01.289Z] Added zayava_1.txt as zayava
+[2026-05-12T19:22:01.289Z] Added zvit_1.txt as zvit
+[2026-05-12T19:22:01.290Z] Model trained successfully
+[2026-05-12T19:22:06.626Z] Added dogovir_1.txt as dogovir
+[2026-05-12T19:22:06.627Z] Added nakaz_2.txt as nakaz
+[2026-05-12T19:22:06.627Z] Added nazva_3.txt as nazva
+[2026-05-12T19:22:06.627Z] Added zayava_1.txt as zayava
+[2026-05-12T19:22:06.628Z] Added zvit_1.txt as zvit
+[2026-05-12T19:22:06.628Z] Model trained successfully
+[2026-05-12T19:22:10.274Z] Classified C:\Users\user\Desktop\it-support\module_1\documents\zvit_1.txt as zvit
+[2026-05-12T19:22:12.287Z] Stats saved
+[2026-05-12T19:22:22.970Z] Classified C:\Users\user\Desktop\it-support\module_1\documents\nazva_3.txt as nazva
+[2026-05-12T19:22:29.827Z] Stats loaded
